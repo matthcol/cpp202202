@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <cstdint>
 #include <vector>
+#include <string>
 
 #include "algorithms.h"
 
@@ -273,6 +274,26 @@ void exercice_research_value() {
 	} while (indexFound >= 0);
 }
 
+void learn_strings() {
+	// texts in C
+	char text[] = "Toulouse";
+	char* text2 = text;
+
+	// texts in C++ : std::string can receive a const char*
+	string city = "Toulouse";
+	string city2("Pamiers");
+	u16string city3 = u"दिल्ली";
+	string noCity; // empty string with default constructor
+
+	cout << city << endl;
+	// cout << city3 << endl;
+	cout << "Size: " << city.size() << " / " << city.length() << endl;
+	// predicate : empty, C+20: starts_with, ends_with
+	cout << boolalpha << city.starts_with("T") << endl;
+	cout << boolalpha << city2.starts_with("T") << endl;
+	// substr, find, rfind
+	cout << city.substr(0, 4) << " / " << city.substr(4) << endl;
+}
 
 int main() {
 	// learn_hello();
@@ -286,6 +307,7 @@ int main() {
 	// learn_conditonal_structure_flow_switch();
 	// learn_loops_for();
 	// learn_loops_while();
-	exercice_research_value();
+	// exercice_research_value();
+	learn_strings();
 	return EXIT_SUCCESS;
 }

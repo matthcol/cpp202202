@@ -5,6 +5,6 @@
 
 using namespace std;
 
-int search(double value, vector<double> vector, int startIndex = 0);
+int search(double value, const vector<double>& vector, int startIndex = 0);
 
 #endif
